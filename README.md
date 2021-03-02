@@ -1,7 +1,8 @@
 # Anc2Vec
 
 Anc2Vec is a method to embed GO terms into an Euclidean space. Embeddings are
-constructed to preserve ancestor terms and sub-ontology information.
+constructed to preserve the uniqueness of terms, their ancestor terms, and
+sub-ontology information.
 
 ## Embeddings availability
 
