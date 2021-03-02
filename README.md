@@ -16,7 +16,7 @@ import numpy as np
 embeddings = np.load('embeddings.npz', allow_pickle=True)
 ```
 
-`embeddings` object is dictionary-like with two keys: `index2term` and
+`embeddings` object is dictionary-like with two keys: `term2index` and
 `embeds`.
 
 ## Instalation
