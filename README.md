@@ -6,9 +6,10 @@ constructed to preserve ancestor terms and sub-ontology information.
 
 ## Embeddings availability
 
-The pre-trained Anc2Vec embeddings build from obo file release XXX are
-available [here](https://drive.google.com/file/d/1u8bmzv3q1UzfKjc4ZleCIbX5BSoz7mJ7/view?usp=sharing). Once dowloaded, they can be easily loaded
-with numpy:
+The pre-trained Anc2Vec embeddings build from obo file release 2020-10-06 are
+available
+[here](https://drive.google.com/file/d/1u8bmzv3q1UzfKjc4ZleCIbX5BSoz7mJ7/view?usp=sharing). Once
+dowloaded, they can be easily loaded with numpy:
 
 ```python
 import numpy as np
