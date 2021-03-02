@@ -47,7 +47,8 @@ def fit(obo_fin, embedding_sz=200, batch_sz=64, num_epochs=100):
 
     # recover trained model with best loss
     tmpdir = tempfile.gettempdir()
-    model_file = tmpdir + '/models/' + model_name + '.tf'
-    breakpoint()
-    model = tf.keras.models.load_model(model_file)
-    return {'term2index': tok.term2index, 'embeddings': model.get_layer('embedding').numpy()}
+    model_file = tmpdir + '/models/' + model_name + '/best.tf'
+
+    model = tf.keras.models.load_model(model_file, compile=False)
+    embeddings = model.get_layer('embedding').weights[0].numpy()
+    return {'term2index': tok.term2index, 'embeddings': embeddings}
