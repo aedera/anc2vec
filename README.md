@@ -1,6 +1,5 @@
 # Anc2Vec
 
-## Overview
 Anc2Vec is a method to embed GO terms into a Euclidean space. Embeddings are
 constructed to preserve ancestor terms and sub-ontology information.
 
@@ -36,3 +35,7 @@ You can find examples on how to get the embeddings of specific GO terms in the
 
 * [Notebook]() Download and use pre-trained embeddings
 * [Notebook](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/anc2vec_notbook.ipynb) to construct Anc2Vec embeddings for a specific obo file
+
+## Requirements
+
+Python dependencies can be install using `pip install -r requirements.txt`.

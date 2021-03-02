@@ -6,6 +6,8 @@ authors = ["Alejandro A. Edera <aedera@sinc.unl.edu.ar>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
+tensorflow = "2.3.1"
+numpy = "1.18.5"
 
 [tool.poetry.dev-dependencies]
 
