@@ -13,10 +13,12 @@ dowloaded, they can be easily loaded with numpy:
 
 ```python
 import numpy as np
-term2index, embeddings = np.load('embeddings.npz', allow_pickle=True)
+embeds = np.load('embeddings.npz', allow_pickle=True)
 ```
 
-`term2index` is a python dictionary that maps GO terms to row indexes of `embeddings`.
+`embeds` is a python dictionary with two elements: `term2index` that maps GO
+terms to row indexes, and `embeddings` a matrix whose rows contain embeddings
+of GO terms.
 
 ## Instalation
 

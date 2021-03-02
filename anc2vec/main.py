@@ -21,4 +21,4 @@ def get_embeddings():
 
     obj = np.load(emb_fin, allow_pickle=True)
 
-    return obj['term2index'].item(), obj['embed']
+    return {'term2index':obj['term2index'].item(), 'embeddings':obj['embeds']}
