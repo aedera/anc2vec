@@ -17,6 +17,6 @@ def get_embeddings():
             "Start downloading pre-trained Anc2Vec embeddings (~35MB)..."
         )
         utils.download_file_from_google_drive(
-            '1kHG9X3NpjmIDa_-OtmYmA9A8BGpGS9th', emb_fin)
+            '13DMaWYi-zBF8hbDFvIJM5p5vGb6kUPf3', emb_fin)
 
     return np.load(emb_fin, allow_pickle=True)
