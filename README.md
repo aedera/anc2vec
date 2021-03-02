@@ -22,8 +22,8 @@ of GO terms. More details in section [Examples](#examples).
 
 ## Installation
 
-If you want to construct embeddings for an obo file of your interest, you can install
-`anc2vec` package via pip:
+If you want to construct embeddings using an obo file of your interest, you
+can install `anc2vec` package via pip:
 
 ```bash
 pip install -U "anc2vec @ git+https://github.com/aedera/anc2vec.git"
