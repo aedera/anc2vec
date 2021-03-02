@@ -17,7 +17,7 @@ embeds = np.load('embeddings.npz', allow_pickle=True)
 
 `embeds` is a python dictionary with two elements: `term2index` that maps GO
 terms to row indexes, and `embeddings` a matrix whose rows contain embeddings
-of GO terms. More details in section [Examples](##examples).
+of GO terms. More details in section [Examples](#examples).
 
 ## Installation
 
