@@ -4,7 +4,7 @@ import numpy as np
 from . import losses
 from .layers import Distance2logprob
 
-class NeighborhoodEmbedder(tf.keras.Model):
+class Embedder(tf.keras.Model):
     def _build(vocab_sz, embedding_sz):
         inputs = tf.keras.Input(shape=(vocab_sz), dtype=tf.float32)
 
@@ -33,8 +33,8 @@ class NeighborhoodEmbedder(tf.keras.Model):
         return tf.keras.Model(inputs, [y, z, w])
 
     def build(vocab_sz, embedding_sz):
-        m = NeighborhoodEmbedder._build(vocab_sz, embedding_sz)
-        model = NeighborhoodEmbedder(m.input, m.output, name='NeighborhoodEmbedder')
+        m = Embedder._build(vocab_sz, embedding_sz)
+        model = Embedder(m.input, m.output, name='Embedder')
 
         optimizer = tf.keras.optimizers.Adam()
 

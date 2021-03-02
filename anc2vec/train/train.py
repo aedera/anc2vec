@@ -6,7 +6,7 @@ import tensorflow as tf
 
 from . import onto
 from .utils import Tokenizer
-from .models import NeighborhoodEmbedder
+from .models import Embedder
 from .dataset import Dataset
 
 def define_callbacks(model_name):
@@ -36,9 +36,13 @@ def fit(obo_fin, embedding_sz=2, batch_sz=4, num_epochs=10):
                         seed=1234).build()
     #train_set = train_set.take(tok.vocab_sz).cache()
 
-    model = NeighborhoodEmbedder.build(tok.vocab_sz, embedding_sz)
+    model = Embedder.build(tok.vocab_sz, embedding_sz)
     print(model.summary())
 
     model.fit(train_set,
               epochs=num_epochs,
               callbacks=define_callbacks(model.name + '_embedding_sz=' + str(embedding_sz)))
+
+    # load model with best loss
+    #tf.models.load_model(
+    #return {'term2index': tok.term2index, 'embeddings': model.get_layer('embedding').numpy()}
