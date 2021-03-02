@@ -12,8 +12,11 @@ with numpy:
 
 ```python
 import numpy as np
-embeds = np.load('embeddings.npy')
+embeddings = np.load('embeddings.npz', allow_pickle=True)
 ```
+
+`embeddings` object is dictionary-like with two keys: `index2term` and
+`embeds`.
 
 ## Instalation
 
