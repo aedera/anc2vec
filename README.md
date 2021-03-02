@@ -8,7 +8,7 @@ sub-ontology information.
 
 The pre-trained Anc2Vec embeddings build from obo file release 2020-10-06 are
 available
-[here](https://drive.google.com/file/d/1u8bmzv3q1UzfKjc4ZleCIbX5BSoz7mJ7/view?usp=sharing). Once
+[here](https://drive.google.com/file/d/13DMaWYi-zBF8hbDFvIJM5p5vGb6kUPf3/view?usp=sharing). Once
 dowloaded, they can be easily loaded with numpy:
 
 ```python
