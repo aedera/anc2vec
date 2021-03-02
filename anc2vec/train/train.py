@@ -24,7 +24,7 @@ def define_callbacks(model_name):
 
     return callbacks
 
-def fit(obo_fin, embedding_sz=2, batch_sz=4, num_epochs=10):
+def fit(obo_fin, embedding_sz=200, batch_sz=64, num_epochs=100):
     go = onto.Ontology(obo_fin, with_rels=True, include_alt_ids=False)
     tok = Tokenizer(go)
 
@@ -39,12 +39,14 @@ def fit(obo_fin, embedding_sz=2, batch_sz=4, num_epochs=10):
     model = Embedder.build(tok.vocab_sz, embedding_sz)
     print(model.summary())
 
+    model_name = model.name + '_embedding_sz=' + str(embedding_sz)
     model.fit(train_set,
               epochs=num_epochs,
-              callbacks=define_callbacks(model.name + '_embedding_sz=' + str(embedding_sz)))
+              callbacks=define_callbacks(model_name))
 
     # load model with best loss
     tmpdir = tempfile.gettempdir()
+    model_fin = tmpdir + '/models/' + model_name
     breakpoint()
-    model = tf.models.load_model(tmpdir + '/models/' + model.name)
+    model = tf.models.load_model(model_fin)
     return {'term2index': tok.term2index, 'embeddings': model.get_layer('embedding').numpy()}
