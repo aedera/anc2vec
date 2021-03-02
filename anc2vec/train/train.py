@@ -12,13 +12,14 @@ from .dataset import Dataset
 
 def define_callbacks(model_name):
     tmpdir = tempfile.gettempdir()
-    models_dir = tmpdir + '/models/' + model_name + '/'
+    model_file = tmpdir + '/models/' + model_name + '.tf'
     datetime_tag = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
     log_dir = tmpdir + "/logs/" + model_name + '/' + datetime_tag
-    tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
+    # tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
 
     callbacks = [
-        tf.keras.callbacks.ModelCheckpoint(filepath=models_dir + datetime_tag + '!{epoch:05d}.tf'),
+        tf.keras.callbacks.ModelCheckpoint(
+            model_file, save_best_only=True, monitor='val_loss')
         # tensorboard_callback
     ]
 
@@ -44,9 +45,9 @@ def fit(obo_fin, embedding_sz=200, batch_sz=64, num_epochs=100):
               epochs=num_epochs,
               callbacks=define_callbacks(model_name))
 
-    # load model with best loss
+    # recover trained model with best loss
     tmpdir = tempfile.gettempdir()
-    model_fin = tmpdir + '/models/' + model_name
+    model_file = tmpdir + '/models/' + model_name + '.tf'
     breakpoint()
-    model = tf.models.load_model(model_fin)
+    model = tf.keras.models.load_model(model_file)
     return {'term2index': tok.term2index, 'embeddings': model.get_layer('embedding').numpy()}
