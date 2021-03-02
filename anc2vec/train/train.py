@@ -12,14 +12,14 @@ from .dataset import Dataset
 
 def define_callbacks(model_name):
     tmpdir = tempfile.gettempdir()
-    model_file = tmpdir + '/models/' + model_name + '.tf'
+    model_file = tmpdir + '/models/' + model_name + '/' + 'best.tf'
     datetime_tag = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
     log_dir = tmpdir + "/logs/" + model_name + '/' + datetime_tag
     # tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
 
     callbacks = [
         tf.keras.callbacks.ModelCheckpoint(
-            model_file, save_best_only=True, monitor='val_loss')
+            model_file, save_best_only=True, monitor='loss')
         # tensorboard_callback
     ]
 
