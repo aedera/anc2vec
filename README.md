@@ -43,4 +43,4 @@ Datasets used for our experiments:
 * [Links dataset](https://drive.google.com/file/d/14gu6XqoTUa8dNSqW1sTY_CHHQrVAyhEa/view?usp=sharing)
 * [Ancestors dataset](https://drive.google.com/file/d/1fgK50TNg5nrade22SwmqZYOeAxgPHIHY/view?usp=sharing)
 * [Protein function dataset](https://drive.google.com/file/d/1eokaKj20tbFTn9jexQXIkONqwHeiBGS-/view?usp=sharing)
-* [STRING dataset]()
+* [STRING dataset](https://drive.google.com/file/d/1dBZqQeBuGf35_pGT6qJWSuX1At32t9CI/view?usp=sharing)
