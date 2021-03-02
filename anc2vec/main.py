@@ -19,4 +19,6 @@ def get_embeddings():
         utils.download_file_from_google_drive(
             '13DMaWYi-zBF8hbDFvIJM5p5vGb6kUPf3', emb_fin)
 
-    return np.load(emb_fin, allow_pickle=True)
+    obj = np.load(emb_fin, allow_pickle=True)
+
+    return obj['term2index'].item(), obj['embed']
