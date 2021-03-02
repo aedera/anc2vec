@@ -6,7 +6,7 @@ sub-ontology information.
 
 ## Embeddings availability
 
-The pre-trained Anc2Vec embeddings build from obo file release 2020-10-06 are
+The pre-trained Anc2Vec embeddings build from [obo file](https://drive.google.com/file/d/1HEB9cVP6S63bi8nv7IrzXSYLLy5EPwBW/view?usp=sharing) release 2020-10-06 are
 available
 [here](https://drive.google.com/file/d/13DMaWYi-zBF8hbDFvIJM5p5vGb6kUPf3/view?usp=sharing). Once
 dowloaded, they can be easily loaded with numpy:
@@ -35,3 +35,9 @@ Some examples on how to use `anc2vec` package:
 
 * [Use pre-trained embeddings](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/pretrained_anc2vec_embeddings.ipynb).
 * [Construct embeddings based on a desired obo file](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/train_anc2vec_embeddings.ipynb).
+
+## Datasets
+
+Datasets used for our experiments:
+
+* [Protein function dataset](https://drive.google.com/file/d/1eokaKj20tbFTn9jexQXIkONqwHeiBGS-/view?usp=sharing)
