@@ -31,8 +31,7 @@ pip install -U "anc2vec @ git+https://github.com/aedera/anc2vec.git"
 
 ## Examples
 
-You can find examples on how to get the embeddings of specific GO terms in the
-`notebooks` folder of this repository:
+Some examples on how to use `anc2vec` package:
 
 * [Use pre-trained embeddings](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/pretrained_anc2vec_embeddings.ipynb).
 * [Train embeddings for a desired obo file](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/train_anc2vec_embeddings.ipynb).
