@@ -4,12 +4,19 @@ This repository contains the code of Anc2Vec, a method to embed GO terms into
 an Euclidean space. Embeddings are constructed to preserve the uniqueness of
 terms, their ancestor terms, and sub-ontology information.
 
+Source code and instructions are provided for reproducibility of the main
+results of *"Anc2Vec: embedding Gene Ontology terms by preserving ancestors
+relationships,"* by A. A. Edera, D. H. Milone, G. Stegmayer (under
+review). Research Institute for Signals, Systems and Computational
+Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
+
+
 ## Embeddings availability
 
-The pre-trained Anc2Vec embeddings build from [obo file](https://drive.google.com/file/d/1HEB9cVP6S63bi8nv7IrzXSYLLy5EPwBW/view?usp=sharing) release 2020-10-06 are
-available
-[here](https://drive.google.com/file/d/13DMaWYi-zBF8hbDFvIJM5p5vGb6kUPf3/view?usp=sharing). Once
-dowloaded, they can be easily loaded with numpy:
+The pre-trained Anc2Vec embeddings built from the Gene Ontology
+([obo file](./data/go.obo) release 2020-10-06) are available
+[here](./data/embeddings.npz). Once downloaded, they can be easily loaded with
+numpy:
 
 ```python
 import numpy as np
@@ -19,6 +26,14 @@ es = np.load('embeddings.npz', allow_pickle=True)
 `es` is a python dictionary with two elements: `term2index` that maps GO
 terms to (row) indexes, and `embeds` a matrix whose rows contain embeddings of
 GO terms.
+
+<!-- To retrieve, for example, the embedding of GO:0001780, we first need to obtain -->
+<!-- its index in the embedding matrix. -->
+
+<!-- ```python -->
+<!-- row_id = embeds['term2index']['GO:0001780'] # recover index -->
+<!-- embeds['embeddings'][row_id] -->
+<!-- ``` -->
 
 ## Installation
 
@@ -41,7 +56,6 @@ Some examples on how to use `anc2vec` package:
 
 Datasets used for our experiments:
 
-* [Links dataset](https://drive.google.com/file/d/14gu6XqoTUa8dNSqW1sTY_CHHQrVAyhEa/view?usp=sharing)
 * [Ancestors dataset](https://drive.google.com/file/d/1fgK50TNg5nrade22SwmqZYOeAxgPHIHY/view?usp=sharing)
 * [Protein function dataset](https://drive.google.com/file/d/1eokaKj20tbFTn9jexQXIkONqwHeiBGS-/view?usp=sharing)
 * [STRING dataset](https://drive.google.com/file/d/1dBZqQeBuGf35_pGT6qJWSuX1At32t9CI/view?usp=sharing)
