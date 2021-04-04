@@ -5,8 +5,8 @@ description = "Approach to constructing embeddings of GO terms."
 authors = ["Alejandro A. Edera <aedera@sinc.unl.edu.ar>"]
 
 [tool.poetry.dependencies]
-python = "3.6"
-tensorflow = "2.3.1"
+python = "^3.6"
+#tensorflow = "2.3.1"
 numpy = "1.18.5"
 
 [tool.poetry.dev-dependencies]
