@@ -10,8 +10,8 @@ relationships,"* by A. A. Edera, D. H. Milone, and G. Stegmayer (under
 review). Research Institute for Signals, Systems and Computational
 Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
 
-<figure  style="float:left">
-  <img src="img/Fig01.jpg" alt="Anc2Vec" height="400"/>
+<figure>
+  <img src="img/Fig01.jpg" alt="Anc2Vec" height="400" style="vertical-align:middle"/>
 
   <figcaption> Fig. 1. The GO and the architecture of Anc2Vec. A) Structure of
   the GO. It is composed of three sub-ontologies: BP, CC, and MF. Colored
