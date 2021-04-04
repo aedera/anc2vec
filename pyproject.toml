@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "anc2vec"
 version = "0.1.0"
-description = "Approach to constructing embeddings of GO terms."
+description = "Neural-based approach for constructing embeddings of GO terms."
 authors = ["Alejandro A. Edera <aedera@sinc.unl.edu.ar>"]
 
 [tool.poetry.dependencies]
