@@ -15,23 +15,24 @@ Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
 
 The pre-trained Anc2Vec embeddings built from the Gene Ontology
 ([obo file](./anc2vec/data/go.obo) release 2020-10-06) are available
-[here](./anc2vec/data/embeddings.npz). Once downloaded, they can be easily
+[here](./anc2vec/data/embeddings.pklz). Once downloaded, they can be easily
 loaded with numpy:
 
 ```python
-import numpy as np
-es = np.load('embeddings.npz', allow_pickle=True)
+import gzip
+import pickle
+
+f = gzip.open('embeddings.pklz', 'rb')
+es = pickle.load(f) # read embeddings
+f.close()
 ```
 
-`es` is a python dictionary with two elements: `term2index` that maps GO terms
-to (row) indexes, and `embeds` a matrix whose rows contain embeddings of GO
-terms. For example, to retrieve the embedding of GO:0001780, we first need to
-obtain its row index in the embedding matrix:
+`es` is a python dictionary that maps GO terms with their corresponding
+embeddings. For example, to retrieve the embedding of GO:0001780, we can use
+the following command:
 
 ```python
-term2index = es['term2index'].item()
-row_id = term2index['GO:0001780'] # recover row index
-e = es['embeds'][row_id,:] # retrieve embedding
+e = es['GO:0001780']
 ```
 
 ## Installation
