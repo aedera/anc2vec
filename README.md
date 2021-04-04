@@ -28,7 +28,7 @@ Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
     Points depict embeddings of GO terms. B) Distribution of depths. Colors
     plot the depth of each term in the GO hierarchy. C) The Jaccard index and
     the semantic similarity between the embeddings of GO terms.
-.</figcaption>
+</figcaption>
 </figure>
 <br>
 
