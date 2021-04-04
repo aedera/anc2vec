@@ -10,6 +10,27 @@ relationships,"* by A. A. Edera, D. H. Milone, and G. Stegmayer (under
 review). Research Institute for Signals, Systems and Computational
 Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
 
+<figure  style="float:left">
+  <img src="img/Fig01.png" alt="Anc2Vec" height="400"/>
+
+  <figcaption> Fig. 1. The GO and the architecture of Anc2Vec. A) Structure of
+  the GO. It is composed of three sub-ontologies: BP, CC, and MF. Colored
+  nodes show the ancestors of a sample GO term. B) Anc2Vec architecture. The
+  GO term is encoded as a vector x and transformed into a vector h , which is
+  mapped into three vectors used to optimize Anc2Vec weights.
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="img/Fig02.png" alt="Anc2Vec" width="550"/>
+
+  <figcaption>Fig. 2. Anc2Vec embeddings of GO terms in the three sub-ontologies. A)
+    Points depict embeddings of GO terms. B) Distribution of depths. Colors
+    plot the depth of each term in the GO hierarchy. C) The Jaccard index and
+    the semantic similarity between the embeddings of GO terms.
+.</figcaption>
+</figure>
+<br>
 
 ## Embeddings availability
 
@@ -35,15 +56,6 @@ the following command:
 e = es['GO:0001780']
 ```
 
-## Installation
-
-If you want to construct embeddings using an obo file of your interest, you
-can install `anc2vec` package via pip:
-
-```bash
-pip install -U "anc2vec @ git+https://github.com/aedera/anc2vec.git"
-```
-
 ## Examples
 
 Some examples on how to use `anc2vec` package:
@@ -54,8 +66,17 @@ Some examples on how to use `anc2vec` package:
 
 ## Datasets
 
-Datasets used for our experiments:
+Datasets used for experiments:
 
 * [Ancestors dataset](https://drive.google.com/file/d/1fgK50TNg5nrade22SwmqZYOeAxgPHIHY/view?usp=sharing)
 * [Protein function dataset](https://drive.google.com/file/d/1eokaKj20tbFTn9jexQXIkONqwHeiBGS-/view?usp=sharing)
 * [STRING dataset](https://drive.google.com/file/d/1dBZqQeBuGf35_pGT6qJWSuX1At32t9CI/view?usp=sharing)
+
+## Installation
+
+If you want to construct embeddings using an obo file of your interest, you
+can install `anc2vec` package via pip:
+
+```bash
+pip install -U "anc2vec @ git+https://github.com/aedera/anc2vec.git"
+```
