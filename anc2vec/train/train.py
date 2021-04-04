@@ -51,4 +51,10 @@ def fit(obo_fin, embedding_sz=200, batch_sz=64, num_epochs=100):
 
     model = tf.keras.models.load_model(model_file, compile=False)
     embeddings = model.get_layer('embedding').weights[0].numpy()
-    return {'term2index': tok.term2index, 'embeddings': embeddings}
+
+    # transform embeddings into a dictionary
+    embds = {}
+    for i, t in enumerate(tok.term2index):
+        embds[t] = embeddings[i,:]
+
+    return embds

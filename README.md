@@ -14,9 +14,9 @@ Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
 ## Embeddings availability
 
 The pre-trained Anc2Vec embeddings built from the Gene Ontology
-([obo file](./data/go.obo) release 2020-10-06) are available
-[here](./data/embeddings.npz). Once downloaded, they can be easily loaded with
-numpy:
+([obo file](./anc2vec/data/go.obo) release 2020-10-06) are available
+[here](./anc2vec/data/embeddings.npz). Once downloaded, they can be easily
+loaded with numpy:
 
 ```python
 import numpy as np
