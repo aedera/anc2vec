@@ -25,8 +25,8 @@ es = np.load('embeddings.npz', allow_pickle=True)
 
 `es` is a python dictionary with two elements: `term2index` that maps GO terms
 to (row) indexes, and `embeds` a matrix whose rows contain embeddings of GO
-terms. To retrieve, for example, the embedding of GO:0001780, we first need to
-obtain its row index in the embedding matrix.
+terms. For example, to retrieve the embedding of GO:0001780, we first need to
+obtain its row index in the embedding matrix:
 
 ```python
 term2index = es['term2index'].item()
