@@ -40,16 +40,14 @@ Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
 
 The pre-trained Anc2Vec embeddings built from the Gene Ontology
 ([obo file](./anc2vec/data/go.obo) release 2020-10-06) are available
-[here](./anc2vec/data/embeddings.pklz). Once downloaded, they can be easily
+[here](./anc2vec/data/embeddings.npz). Once downloaded, they can be easily
 loaded as follows:
 
 ```python
-import gzip
-import pickle
+import numpy as np
 
-f = gzip.open('embeddings.pklz', 'rb')
-es = pickle.load(f) # read embeddings
-f.close()
+es = np.load('embeddings.npz', allow_pickle=True)['embds'].item()
+
 ```
 
 `es` is a python dictionary that maps GO terms with their corresponding

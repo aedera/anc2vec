@@ -10,10 +10,8 @@ SRC_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)),
                        'data/')
 
 def get_embeddings():
-    fname = os.path.join(SRC_DIR, 'embeddings.pklz')
-    f = gzip.open(fname, 'rb')
-    embs = pickle.load(f)
-    f.close()
+    fname = os.path.join(SRC_DIR, 'embeddings.npz')
+    embs = np.load(fname, allow_pickle=True)['embds'].item()
 
     return embs
 
