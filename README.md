@@ -81,3 +81,11 @@ you can install `anc2vec` package via pip:
 ```bash
 pip install -U "anc2vec @ git+https://github.com/aedera/anc2vec.git"
 ```
+
+Alternatively, you can install `anc2vec` on a conda environments:
+
+```bash
+conda create --name anc2vec python=3.6
+conda activate anc2vec
+pip install -U "anc2vec @ git+https://github.com/aedera/anc2vec.git"
+```
