@@ -24,10 +24,10 @@ Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
 <figure>
   <img src="img/Fig02.jpg" alt="Anc2Vec" width="550"/>
 
-  <figcaption>Fig. 2. Anc2Vec embeddings of GO terms in the three sub-ontologies. A)
-    Points depict embeddings of GO terms. B) Distribution of depths. Colors
-    plot the depth of each term in the GO hierarchy. C) The Jaccard index and
-    the semantic similarity between the embeddings of GO terms.
+  <figcaption>Fig. 2. Anc2Vec embeddings of GO terms in the three sub-ontologies.
+    Points depict embeddings of GO terms whose colors encode the
+    sub-ontologies: BP (Biological Process), CC (Cellular Component), and MF
+    (Molecular Function).
 </figcaption>
 </figure>
 <br>
