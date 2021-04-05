@@ -11,7 +11,9 @@ review). Research Institute for Signals, Systems and Computational
 Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
 
 <figure>
+  <p align="center">
   <img src="img/Fig01.jpg" alt="Anc2Vec" height="400" style="vertical-align:middle"/>
+  </p>
 
   <figcaption> Fig. 1. The GO and the architecture of Anc2Vec. A) Structure of
   the GO. It is composed of three sub-ontologies: BP, CC, and MF. Colored
@@ -22,7 +24,9 @@ Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
 </figure>
 
 <figure>
-  <img src="img/Fig02.jpg" alt="Anc2Vec" width="550"/>
+  <p align="center">
+  <img src="img/Fig02.jpg" alt="Anc2Vec" width="440"/>
+  </p>
 
   <figcaption>Fig. 2. Anc2Vec embeddings of GO terms in the three sub-ontologies.
     Points depict embeddings of GO terms whose colors encode the
