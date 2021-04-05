@@ -15,11 +15,11 @@ Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
   <img src="img/Fig01.jpg" alt="Anc2Vec" height="400" style="vertical-align:middle"/>
   </p>
 
-  <figcaption> The figure shows Anc2Vec embeddings of GO terms in the three
-  sub-ontologies. Points depict embeddings of GO terms whose colors encode the
-sub-ontologies: BP (Biological Process), CC (Cellular Component), and MF
-(Molecular Function).
-  </figcaption>
+  <figcaption> The figure shows the Anc2Vec embeddings of GO terms in the
+  three sub-ontologies. Points depict embeddings of GO terms whose colors
+  encode the sub-ontologies: BP (Biological Process), CC (Cellular Component),
+  and MF (Molecular Function).
+</figcaption>
 </figure>
 
 ## Embeddings availability
