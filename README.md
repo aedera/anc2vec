@@ -25,7 +25,7 @@ Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
 
 <figure>
   <p align="center">
-  <img src="img/Fig02.jpg" alt="Anc2Vec" width="420"/>
+  <img src="img/Fig02.jpg" alt="Anc2Vec" width="410"/>
   </p>
 
   <figcaption>Fig. 2. Anc2Vec embeddings of GO terms in the three sub-ontologies.
