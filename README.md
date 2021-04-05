@@ -1,8 +1,8 @@
 # Anc2Vec
 
 This repository contains the code of Anc2Vec, a method to embed GO terms into
-an Euclidean space. Embeddings are constructed to preserve the uniqueness of
-terms, their ancestor terms, and sub-ontology information.
+an Euclidean space. These embeddings can preserve the uniqueness of terms,
+their ancestor terms, and sub-ontology information.
 
 Source code and instructions are provided for reproducibility of the main
 results of *"Anc2Vec: embedding Gene Ontology terms by preserving ancestors
@@ -37,8 +37,8 @@ es = np.load('embeddings.npz', allow_pickle=True)['embds'].item()
 ```
 
 `es` is a python dictionary that maps GO terms with their corresponding
-embeddings. For example, to retrieve the embedding of GO:0001780, we can use
-the following command:
+embeddings. For example, to retrieve the embedding of the term GO:0001780, we
+can use the following command:
 
 ```python
 e = es['GO:0001780']
@@ -48,13 +48,14 @@ e = es['GO:0001780']
 
 Some examples on how to use `anc2vec` package:
 
-* [Use pre-trained embeddings](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/pretrained_anc2vec_embeddings.ipynb)
-* [Project pre-trained embeddings onto a 2-D space](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/project_embeddings.ipynb)
-* [Construct embeddings based on a desired obo file](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/train_anc2vec_embeddings.ipynb)
+* [Using pre-trained embeddings](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/pretrained_anc2vec_embeddings.ipynb)
+* [Projecting pre-trained embeddings onto a 2-D space](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/project_embeddings.ipynb)
+*
+  [Building own embeddings based on a desired obo file](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/train_anc2vec_embeddings.ipynb)
 
 ## Datasets
 
-Datasets used for experiments:
+Datasets used in the experiments of the manuscript:
 
 * [Ancestors dataset](https://drive.google.com/file/d/1fgK50TNg5nrade22SwmqZYOeAxgPHIHY/view?usp=sharing)
 * [Protein function dataset](https://drive.google.com/file/d/1eokaKj20tbFTn9jexQXIkONqwHeiBGS-/view?usp=sharing)
@@ -62,8 +63,8 @@ Datasets used for experiments:
 
 ## Installation
 
-If you want to construct embeddings using an obo file of your interest, you
-can install `anc2vec` package via pip:
+If you want to build your own embeddings using an obo file of your interest,
+you can install `anc2vec` package via pip:
 
 ```bash
 pip install -U "anc2vec @ git+https://github.com/aedera/anc2vec.git"
