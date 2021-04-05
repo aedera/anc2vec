@@ -10,9 +10,23 @@ relationships,"* by A. A. Edera, D. H. Milone, and G. Stegmayer (under
 review). Research Institute for Signals, Systems and Computational
 Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
 
+
 <figure>
   <p align="center">
   <img src="img/Fig01.jpg" alt="Anc2Vec" height="400" style="vertical-align:middle"/>
+  </p>
+
+  <figcaption> The figure shows schematics of the GO structure and the
+  architecture of Anc2Vec. A) GO structure. It is composed of three
+  sub-ontologies: BP, CC, and MF. Colored nodes show the ancestors of a sample
+  GO term. B) Anc2Vec architecture. The GO term is encoded as a vector x and
+  transformed into a vector h , which is mapped into three vectors used to
+  optimize Anc2Vec weights.
+</figcaption> </figure>
+
+<figure>
+  <p align="center">
+  <img src="img/Fig02.jpg" alt="Anc2Vec" height="400" style="vertical-align:middle"/>
   </p>
 
   <figcaption> The figure shows the Anc2Vec embeddings of GO terms in the
