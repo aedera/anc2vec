@@ -129,7 +129,7 @@ Please check the examples below for more information about this functionality.
 
 To try anc2vec, below there are links to
 [Jupyter notebooks](https://jupyter.org) that use
-[Google Colab](https://research.google.com/colaboratory/) which offers a free
+[Google Colab](https://research.google.com/colaboratory/) which offers free
 computing on the Google cloud.
 
 * [Using `anc2vec` pre-trained embeddings](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/pretrained_anc2vec_embeddings.ipynb)
