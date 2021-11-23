@@ -1,27 +1,31 @@
 # Anc2vec
 
 Anc2vec is a novel method based on neural networks to construct embeddings of
-GO terms. These embeddings can preserve the ontological uniqueness of terms,
-their ancestor relationships and sub-ontology information.
+ontological terms exclusively using information of the Gene Ontology
+(GO). These embeddings are built to preserve three structural features: the
+ontological uniqueness of terms, their ancestor relationships and the
+sub-ontology to which they belong.
 
-This repository is a Python package containing the source code of anc2vec, as
-well as instructions for reproducibility of the main results of *"Anc2vec:
-embedding Gene Ontology terms by preserving ancestors relationships,"* by
-A. A. Edera, D. H. Milone, and G. Stegmayer (under review). Research Institute
-for Signals, Systems and Computational Intelligence,
-[sinc(i)](https://sinc.unl.edu.ar).
+This repository offers a Python package containing the source code of anc2vec,
+as well as instructions for reproducibility of the main results of the study
+where this method was proposed:
+
+*Anc2vec: embedding Gene Ontology terms by preserving ancestors
+relationships*, by A. A. Edera, D. H. Milone, and G. Stegmayer (under
+review). Research Institute for Signals, Systems and Computational
+Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
 
 <figure>
   <p align="center">
   <img src="img/Fig01.jpg" alt="Anc2vec" height="400" style="vertical-align:middle"/>
   </p>
 
-  <figcaption> Fig. 1. Schematics of the GO structure and the architecture of
-  anc2vec. A) GO structure. It is composed of three sub-ontologies: BP, CC,
-  and MF. Colored nodes show the ancestors of a sample GO term. B) Anc2vec
-  architecture. The GO term is encoded as a vector x and transformed into a
-  vector h , which is mapped into three vectors used to optimize anc2vec
-  weights.  </figcaption> </figure>
+  <figcaption> Fig. 1. Panel A) The GO structure is composed by hierarchical
+  relationships between terms arranged in three sub-ontologies: BP, CC, and
+  MF. Panel B) Anc2vec architecture. The GO term is encoded as a one-hot
+  vector x that is transformed into an embedding h, which is used to predict
+  three structural features of the GO that are used for weight optimization.
+  </figcaption> </figure>
 
 <figure>
   <p align="center">
