@@ -95,7 +95,7 @@ These `anc2vec` embeddings are ready to be used for semantic similarity
 task. Below there are examples showing how to use them for calculating
 [cosine distances](https://en.wikipedia.org/wiki/Cosine_similarity).
 
-### Built Anc2vec embeddings
+### Built Anc2vec embeddings from scratch
 
 The `anc2vec` package also contains a function to build embeddings from
 scratch using a specific
