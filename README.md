@@ -47,7 +47,11 @@ It is recommendable to have installed
 If Conda is installed, first create and activate a conda environment, for
 example, named anc2vec:
 
-```bash conda create --name anc2vec python=3.6 conda activate anc2vec ```
+```bash
+conda create --name anc2vec python=3.6
+conda activate anc2vec
+```
+
 Next, install the `anc2vec` package via the
 [pip package manager](https://pip.pypa.io/en/stable/installing/):
 
