@@ -4,7 +4,7 @@ Anc2vec is a novel method based on neural networks to construct embeddings of
 GO terms. These embeddings can preserve the ontological uniqueness of terms,
 their ancestor relationships and sub-ontology information.
 
-This repository is a Python package containing the source code of Anc2vec, as
+This repository is a Python package containing the source code of anc2vec, as
 well as instructions for reproducibility of the main results of *"Anc2vec:
 embedding Gene Ontology terms by preserving ancestors relationships,"* by
 A. A. Edera, D. H. Milone, and G. Stegmayer (under review). Research Institute
@@ -17,10 +17,10 @@ for Signals, Systems and Computational Intelligence,
   </p>
 
   <figcaption> Fig. 1. Schematics of the GO structure and the architecture of
-  Anc2vec. A) GO structure. It is composed of three sub-ontologies: BP, CC,
+  anc2vec. A) GO structure. It is composed of three sub-ontologies: BP, CC,
   and MF. Colored nodes show the ancestors of a sample GO term. B) Anc2vec
   architecture. The GO term is encoded as a vector x and transformed into a
-  vector h , which is mapped into three vectors used to optimize Anc2vec
+  vector h , which is mapped into three vectors used to optimize anc2vec
   weights.  </figcaption> </figure>
 
 <figure>
@@ -58,7 +58,7 @@ pip install -U "anc2vec @ git+https://github.com/aedera/anc2vec.git"
 
 ## Anc2vec functionalities
 
-### Access pre-trained Anc2vec embeddings
+### Access pre-trained embeddings
 
 The `anc2vec` package has already available the same embedding of GO terms
 used in the study. These embeddings were built using the Gene Ontology release
@@ -95,7 +95,7 @@ These `anc2vec` embeddings are ready to be used for semantic similarity
 task. Below there are examples showing how to use them for calculating
 [cosine distances](https://en.wikipedia.org/wiki/Cosine_similarity).
 
-### Built Anc2vec embeddings from scratch
+### Built embeddings from scratch
 
 The `anc2vec` package also contains a function to build embeddings from
 scratch using a specific
