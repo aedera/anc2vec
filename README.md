@@ -140,7 +140,8 @@ computing on the Google cloud.
 
 ## Datasets
 
-These are the main datasets used in the experiments of the study:
+These are the main datasets used in the experiments of the study where anc2vec
+is proposed:
 
 * [Ancestors dataset](https://drive.google.com/file/d/1fgK50TNg5nrade22SwmqZYOeAxgPHIHY/view?usp=sharing)
 * [Protein function dataset](https://drive.google.com/file/d/1eokaKj20tbFTn9jexQXIkONqwHeiBGS-/view?usp=sharing)
