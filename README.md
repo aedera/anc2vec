@@ -119,7 +119,8 @@ The object `builder` uses the input `go.obo` file to extract structural
 features used to build the embeddings of GO terms. Note that `builder` is
 called with additional parameters indicating the dimensionality of the
 embeddings (`embedding_sz`) and the number of optimization steps used for
-embedding building (`num_epochs`).
+embedding building (`num_epochs`). As previously shown, the output `es` is a
+Python dictionary mapping GO terms to embeddings.
 
 Please check the examples below for more information about this functionality.
 
