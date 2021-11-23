@@ -36,21 +36,20 @@ for Signals, Systems and Computational Intelligence,
 
 ## Requirements
 
-Anc2vec requires Python 3.6 and TensorFlow 2.3.1.
+Anc2vec requires [Python](https://www.python.org/) 3.6 and
+[TensorFlow](https://www.tensorflow.org/) 2.3.1.
 
 ## Installation
 
 It is recommendable to have installed
 [Conda](https://docs.conda.io/en/latest/), to avoid Python package conflicts.
 
-After having Conda installed, create and activate a conda environment, for
+If Conda is installed, first create and activate a conda environment, for
 example, named anc2vec:
 
-```bash
-conda create --name anc2vec python=3.6
-conda activate anc2vec
-```
-Next, install the `anc2vec` package via pip:
+```bash conda create --name anc2vec python=3.6 conda activate anc2vec ```
+Next, install the `anc2vec` package via the
+[pip package manager](https://pip.pypa.io/en/stable/installing/):
 
 ```bash
 pip install -U "anc2vec @ git+https://github.com/aedera/anc2vec.git"
@@ -95,14 +94,14 @@ These `anc2vec` embeddings are ready to be used for semantic similarity
 task. Below there are examples showing how to use them for calculating
 [cosine distances](https://en.wikipedia.org/wiki/Cosine_similarity).
 
-### Built embeddings from scratch
+### Built your own embeddings
 
 The `anc2vec` package also contains a function to build embeddings from
 scratch using a specific
-[OBO file](http://owlcollab.github.io/oboformat/doc/obo-syntax.html), which is
-a human-readable file for describing the GO. This functionality can be
-particularly useful for experimental scenarios where a specific version of the
-GO is required, such as those available in the
+[OBO file](http://owlcollab.github.io/oboformat/doc/obo-syntax.html), a
+human-readable file usually used to describe the GO. Building embeddings can
+be particularly useful for experimental scenarios where a specific version of
+the GO is required, such as those available in the
 [GO data archive](http://release.geneontology.org/).
 
 The following code shows how to build the embedding for a given OBO file named
@@ -127,6 +126,11 @@ Please check the examples below for more information about this functionality.
 
 
 ## Notebooks: examples on how to use `anc2vec`
+
+To try anc2vec, below there are links to
+[Jupyter notebooks](https://jupyter.org) that use
+[Google Colab](https://research.google.com/colaboratory/) which offers a free
+computing on the Google cloud.
 
 * [Using `anc2vec` pre-trained embeddings](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/pretrained_anc2vec_embeddings.ipynb)
 
