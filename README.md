@@ -1,15 +1,14 @@
 # Anc2Vec
 
-This repository contains the code of Anc2Vec, a method to embed GO terms into
-an Euclidean space. These embeddings can preserve the uniqueness of terms,
-their ancestor terms, and sub-ontology information.
+Anc2Vec is a novel method based on neural networks to construct embeddings of
+GO terms. These embeddings can preserve the ontological uniqueness of terms,
+their ancestor relationships and sub-ontology information.
 
-Source code and instructions are provided for reproducibility of the main
-results of *"Anc2Vec: embedding Gene Ontology terms by preserving ancestors
-relationships,"* by A. A. Edera, D. H. Milone, and G. Stegmayer (under
-review). Research Institute for Signals, Systems and Computational
+This repository contains the source code and instructions for reproducibility
+of the main results of *"Anc2Vec: embedding Gene Ontology terms by preserving
+ancestors relationships,"* by A. A. Edera, D. H. Milone, and G. Stegmayer
+(under review). Research Institute for Signals, Systems and Computational
 Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
-
 
 <figure>
   <p align="center">
@@ -34,36 +33,81 @@ Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
   (Molecular Function).
 </figcaption> </figure>
 
-## Embeddings availability
+## Requirements
 
-The pre-trained Anc2Vec embeddings built from the Gene Ontology
-([obo file](./anc2vec/data/go.obo) release 2020-10-06) are available
-[here](./anc2vec/data/embeddings.npz). Once downloaded, they can be easily
-loaded as follows:
+`anc2vec` requires Python 3.6 and TensorFlow 2.3.1.
+
+## Installation
+
+To install `anc2vec` is recommendable to have installed
+[Conda](https://docs.conda.io/en/latest/), to avoid package conflicts.
+
+After having Conda installed, create and activate a conda environment, for
+example, named anc2vec:
+
+```bash
+conda create --name anc2vec python=3.6
+conda activate anc2vec
+```
+Next, install the `anc2vec` package via pip:
+
+```bash
+pip install -U "anc2vec @ git+https://github.com/aedera/anc2vec.git"
+```
+
+## `anc2vec` functionalities
+
+### Pre-trained `anc2vec` embeddings
+
+The `anc2vec` package has already available the embedding of GO terms used in
+the study. These embeddings were built from the Gene Ontology release
+[2020-10-06](./anc2vec/data/go.obo). The embeddings can be easily accessed on
+Python with this command:
 
 ```python
-import numpy as np
+import anc2vec
 
-es = np.load('embeddings.npz', allow_pickle=True)['embds'].item()
+es = anc2vec.get_embeddings()
 
 ```
 
-`es` is a python dictionary that maps GO terms with their corresponding
-embeddings. For example, to retrieve the embedding of the term GO:0001780, we
-can use the following command:
+Here, `es` is a python dictionary that maps GO terms with their corresponding
+200-dimensional embeddings. For example, this command uses this dictionary to
+retrieve the embedding corresponding to the term `GO:0001780`:
 
 ```python
 e = es['GO:0001780']
 ```
 
-## Examples
+This returns a [Numpy](https://numpy.org/) array containing the embedding
 
-Some examples on how to use `anc2vec` package:
+```python
+array([ 0.55203265, -0.23133564,  0.1983797 , -0.3251996 ,  0.20564775,
+       -0.32133245, -0.25364587, -0.16675541, -0.46832997, -0.40702957,
+       ...
+       -0.29757708, -0.33143485, -0.31099185,  0.24465033, -0.25458524,
+       -0.24525951, -0.366758  , -0.04628978,  0.29378492,  0.31249675],
+      dtype=float32)
+```
 
-* [Using pre-trained embeddings](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/pretrained_anc2vec_embeddings.ipynb)
-* [Projecting pre-trained embeddings onto a 2-D space](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/project_embeddings.ipynb)
-*
-  [Building own embeddings based on a desired obo file](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/train_anc2vec_embeddings.ipynb)
+These `anc2vec` embeddings are ready to be used for semantic similarity
+task. Below there are examples showing how to use the `anc2vec` embeddings for
+calculating cosine distances.
+
+### Built `anc2vec` embeddings
+
+The package also contains all the code needed for building `anc2vec`
+embeddings from scratch for a given OBO file. Please check the examples below
+for more information.
+
+
+## Examples on how to use `anc2vec`
+
+* [Using `anc2vec` pre-trained embeddings](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/pretrained_anc2vec_embeddings.ipynb)
+
+* [Projecting `anc2vec` pre-trained embeddings](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/project_embeddings.ipynb)
+
+* [Building `anc2vec` embeddings based on a desired obo file](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/train_anc2vec_embeddings.ipynb)
 
 ## Datasets
 
@@ -73,19 +117,6 @@ Datasets used in the experiments of the manuscript:
 * [Protein function dataset](https://drive.google.com/file/d/1eokaKj20tbFTn9jexQXIkONqwHeiBGS-/view?usp=sharing)
 * [STRING dataset](https://drive.google.com/file/d/1dBZqQeBuGf35_pGT6qJWSuX1At32t9CI/view?usp=sharing)
 
-## Installation
+## License
 
-If you want to build your own embeddings using an obo file of your interest,
-you can install `anc2vec` package via pip:
-
-```bash
-pip install -U "anc2vec @ git+https://github.com/aedera/anc2vec.git"
-```
-
-Alternatively, you can install `anc2vec` on a conda environments:
-
-```bash
-conda create --name anc2vec python=3.6
-conda activate anc2vec
-pip install -U "anc2vec @ git+https://github.com/aedera/anc2vec.git"
-```
+`anc2vec` is released under the [MIT License](LICENSE).
