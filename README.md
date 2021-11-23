@@ -58,7 +58,7 @@ pip install -U "anc2vec @ git+https://github.com/aedera/anc2vec.git"
 
 ## Anc2vec functionalities
 
-### Pre-trained Anc2vec embeddings
+### Access pre-trained Anc2vec embeddings
 
 The `anc2vec` package has already available the same embedding of GO terms
 used in the study. These embeddings were built using the Gene Ontology release
