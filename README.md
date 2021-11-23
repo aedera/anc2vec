@@ -1,25 +1,26 @@
-# Anc2Vec
+# Anc2vec
 
-Anc2Vec is a novel method based on neural networks to construct embeddings of
+Anc2vec is a novel method based on neural networks to construct embeddings of
 GO terms. These embeddings can preserve the ontological uniqueness of terms,
 their ancestor relationships and sub-ontology information.
 
-This repository contains the source code and instructions for reproducibility
-of the main results of *"Anc2Vec: embedding Gene Ontology terms by preserving
-ancestors relationships,"* by A. A. Edera, D. H. Milone, and G. Stegmayer
-(under review). Research Institute for Signals, Systems and Computational
-Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
+This repository is a Python package containing the source code of Anc2vec, as
+well as instructions for reproducibility of the main results of *"Anc2vec:
+embedding Gene Ontology terms by preserving ancestors relationships,"* by
+A. A. Edera, D. H. Milone, and G. Stegmayer (under review). Research Institute
+for Signals, Systems and Computational Intelligence,
+[sinc(i)](https://sinc.unl.edu.ar).
 
 <figure>
   <p align="center">
-  <img src="img/Fig01.jpg" alt="Anc2Vec" height="400" style="vertical-align:middle"/>
+  <img src="img/Fig01.jpg" alt="Anc2vec" height="400" style="vertical-align:middle"/>
   </p>
 
   <figcaption> Fig. 1. Schematics of the GO structure and the architecture of
-  Anc2Vec. A) GO structure. It is composed of three sub-ontologies: BP, CC,
-  and MF. Colored nodes show the ancestors of a sample GO term. B) Anc2Vec
+  Anc2vec. A) GO structure. It is composed of three sub-ontologies: BP, CC,
+  and MF. Colored nodes show the ancestors of a sample GO term. B) Anc2vec
   architecture. The GO term is encoded as a vector x and transformed into a
-  vector h , which is mapped into three vectors used to optimize Anc2Vec
+  vector h , which is mapped into three vectors used to optimize Anc2vec
   weights.  </figcaption> </figure>
 
 <figure>
@@ -27,7 +28,7 @@ Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
   <img src="img/Fig02.jpg" alt="Anc2Vec" height="400" style="vertical-align:middle"/>
   </p>
 
-  <figcaption> Fig. 2. Anc2Vec embeddings of GO terms in the three
+  <figcaption> Fig. 2. Anc2vec embeddings of GO terms in the three
   sub-ontologies. Points depict embeddings of GO terms whose colors encode the
   sub-ontologies: BP (Biological Process), CC (Cellular Component), and MF
   (Molecular Function).
@@ -35,12 +36,12 @@ Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
 
 ## Requirements
 
-`anc2vec` requires Python 3.6 and TensorFlow 2.3.1.
+Anc2vec requires Python 3.6 and TensorFlow 2.3.1.
 
 ## Installation
 
-To install `anc2vec` is recommendable to have installed
-[Conda](https://docs.conda.io/en/latest/), to avoid package conflicts.
+It is recommendable to have installed
+[Conda](https://docs.conda.io/en/latest/), to avoid Python package conflicts.
 
 After having Conda installed, create and activate a conda environment, for
 example, named anc2vec:
@@ -55,12 +56,12 @@ Next, install the `anc2vec` package via pip:
 pip install -U "anc2vec @ git+https://github.com/aedera/anc2vec.git"
 ```
 
-## `anc2vec` functionalities
+## Anc2vec functionalities
 
-### Pre-trained `anc2vec` embeddings
+### Pre-trained Anc2vec embeddings
 
-The `anc2vec` package has already available the embedding of GO terms used in
-the study. These embeddings were built from the Gene Ontology release
+The `anc2vec` package has already available the same embedding of GO terms
+used in the study. These embeddings were built using the Gene Ontology release
 [2020-10-06](./anc2vec/data/go.obo). The embeddings can be easily accessed on
 Python with this command:
 
@@ -68,7 +69,6 @@ Python with this command:
 import anc2vec
 
 es = anc2vec.get_embeddings()
-
 ```
 
 Here, `es` is a python dictionary that maps GO terms with their corresponding
@@ -79,7 +79,8 @@ retrieve the embedding corresponding to the term `GO:0001780`:
 e = es['GO:0001780']
 ```
 
-This returns a [Numpy](https://numpy.org/) array containing the embedding
+The variable `e` is a [Numpy](https://numpy.org/) array containing the
+embedding
 
 ```python
 array([ 0.55203265, -0.23133564,  0.1983797 , -0.3251996 ,  0.20564775,
@@ -91,27 +92,49 @@ array([ 0.55203265, -0.23133564,  0.1983797 , -0.3251996 ,  0.20564775,
 ```
 
 These `anc2vec` embeddings are ready to be used for semantic similarity
-task. Below there are examples showing how to use the `anc2vec` embeddings for
-calculating cosine distances.
+task. Below there are examples showing how to use them for calculating
+[cosine distances](https://en.wikipedia.org/wiki/Cosine_similarity).
 
-### Built `anc2vec` embeddings
+### Built Anc2vec embeddings
 
-The package also contains all the code needed for building `anc2vec`
-embeddings from scratch for a given OBO file. Please check the examples below
-for more information.
+The `anc2vec` package also contains a function to build embeddings from
+scratch using a specific
+[OBO file](http://owlcollab.github.io/oboformat/doc/obo-syntax.html), which is
+a human-readable file for describing the GO. This functionality can be
+particularly useful for experimental scenarios where a specific version of the
+GO is required, such as those available in the
+[GO data archive](http://release.geneontology.org/).
+
+The following code shows how to build the embedding for a given OBO file named
+`go.obo`.
+
+```python
+import anc2vec
+import anc2vec.train as builder
+
+es = builder.fit('go.obo', embedding_sz=200, batch_sz=64, num_epochs=100)
+```
+
+The object `builder` uses the input `go.obo` file to extract structural
+features used to build the embeddings of GO terms. Note that `builder` is
+called with additional parameters indicating the dimensionality of the
+embeddings (`embedding_sz`) and the number of optimization steps used for
+embedding building (`num_epochs`).
+
+Please check the examples below for more information about this functionality.
 
 
-## Examples on how to use `anc2vec`
+## Notebooks: examples on how to use `anc2vec`
 
 * [Using `anc2vec` pre-trained embeddings](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/pretrained_anc2vec_embeddings.ipynb)
 
 * [Projecting `anc2vec` pre-trained embeddings](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/project_embeddings.ipynb)
 
-* [Building `anc2vec` embeddings based on a desired obo file](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/train_anc2vec_embeddings.ipynb)
+* [Building `anc2vec` embeddings for a desired obo file](https://colab.research.google.com/github/aedera/anc2vec/blob/main/examples/train_anc2vec_embeddings.ipynb)
 
 ## Datasets
 
-Datasets used in the experiments of the manuscript:
+These are the main datasets used in the experiments of the study:
 
 * [Ancestors dataset](https://drive.google.com/file/d/1fgK50TNg5nrade22SwmqZYOeAxgPHIHY/view?usp=sharing)
 * [Protein function dataset](https://drive.google.com/file/d/1eokaKj20tbFTn9jexQXIkONqwHeiBGS-/view?usp=sharing)
@@ -119,4 +142,4 @@ Datasets used in the experiments of the manuscript:
 
 ## License
 
-`anc2vec` is released under the [MIT License](LICENSE).
+The `anc2vec` package is released under the [MIT License](LICENSE).
