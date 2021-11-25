@@ -35,8 +35,7 @@ Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
   <figcaption> Fig. 2. Anc2vec embeddings of GO terms in the three
   sub-ontologies. Points depict embeddings of GO terms whose colors encode the
   sub-ontologies: BP (Biological Process), CC (Cellular Component), and MF
-  (Molecular Function). There is available a <a
-  src="https://www.youtube.com/watch?v=DBNXIJt0Q0Q">video</a> showing how
+  (Molecular Function). There is available a <a href="https://www.youtube.com/watch?v=DBNXIJt0Q0Q">video</a> showing how
   2-dimensional embeddings are adjusted during weight optimization.
 
 </figcaption> </figure>
