@@ -130,7 +130,7 @@ features used to build the embeddings of GO terms. Note that `builder` is
 called with additional parameters indicating the dimensionality of the
 embeddings (`embedding_sz`) and the number of optimization steps used for
 embedding building (`num_epochs`). The embeddings built by `builder` are
-stored in `es`, which a Python dictionary mapping GO terms to their
+stored in `es`, which is a Python dictionary mapping GO terms to their
 corresponding embeddings.
 
 Please check the examples below for more information about this functionality.
