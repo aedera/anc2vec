@@ -42,9 +42,7 @@ Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
 The following video shows how 2-dimensional anc2vec embeddings are adjusted
 during weight optimization.
 
-<p align="center">
 [![Alt text](https://img.youtube.com/vi/DBNXIJt0Q0Q/0.jpg)](https://www.youtube.com/watch?v=DBNXIJt0Q0Q)
-</p>
 
 
 ## Requirements
