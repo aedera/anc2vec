@@ -1,10 +1,10 @@
 # Anc2vec
 
 Anc2vec is a novel method based on neural networks to construct embeddings of
-ontological terms exclusively using information of the Gene Ontology
-(GO). These embeddings are built to preserve three structural features: the
-ontological uniqueness of terms, their ancestor relationships and the
-sub-ontology to which they belong.
+ontological terms exclusively using information of the
+[Gene Ontology](http://geneontology.org/) (GO). These embeddings are built to
+preserve three structural features: the ontological uniqueness of terms, their
+ancestor relationships and the sub-ontology to which they belong.
 
 This repository offers a Python package containing the source code of anc2vec,
 as well as instructions for reproducibility of the main results of the study
@@ -99,7 +99,7 @@ array([ 0.55203265, -0.23133564,  0.1983797 , -0.3251996 ,  0.20564775,
 ```
 
 These `anc2vec` embeddings are ready to be used for semantic similarity
-task. Below there are examples showing how to use them for calculating
+tasks. Below there are examples showing how to use them for calculating
 [cosine distances](https://en.wikipedia.org/wiki/Cosine_similarity).
 
 ### Built your own embeddings
@@ -133,7 +133,7 @@ corresponding embeddings.
 Please check the examples below for more information about this functionality.
 
 
-## Notebooks: examples on how to use `anc2vec`
+## Notebooks: examples on how to use the `anc2vec` package
 
 To try anc2vec, below there are links to
 [Jupyter notebooks](https://jupyter.org) that use
