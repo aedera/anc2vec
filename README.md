@@ -22,9 +22,9 @@ Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
 
   <figcaption> Fig. 1. Panel A) The GO structure is composed by hierarchical
   relationships between terms arranged in three sub-ontologies: BP, CC, and
-  MF. Panel B) Anc2vec architecture. The GO term is encoded as a one-hot
-  vector x that is transformed into an embedding h, which is used to predict
-  three structural features of the GO that are used for weight optimization.
+  MF. Panel B) Anc2vec architecture. A GO term is encoded as a one-hot vector
+  x that is transformed into an embedding h, which is used to predict three
+  structural features of the GO that are used for weight optimization.
   </figcaption> </figure>
 
 <figure>
