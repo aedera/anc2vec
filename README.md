@@ -10,9 +10,8 @@ This repository offers a Python package containing the source code of anc2vec,
 as well as instructions for reproducibility of the main results of the study
 where this method was proposed:
 
-*Anc2vec: embedding Gene Ontology terms by preserving ancestors
-relationships*, by A. A. Edera, D. H. Milone, and G. Stegmayer (under
-review). Research Institute for Signals, Systems and Computational
+*[Anc2vec: embedding Gene Ontology terms by preserving
+ancestors relationships](ms.pdf)*, by A. A. Edera, D. H. Milone, and G. Stegmayer. Research Institute for Signals, Systems and Computational
 Intelligence, [sinc(i)](https://sinc.unl.edu.ar).
 
 <figure>
