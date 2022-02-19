@@ -1,10 +1,6 @@
 # Anc2vec
 
-Anc2vec is a novel method based on neural networks to construct embeddings of
-ontological terms exclusively using information of the
-[Gene Ontology](http://geneontology.org/) (GO). These embeddings are built to
-preserve three structural features: the ontological uniqueness of terms, their
-ancestor relationships and the sub-ontology to which they belong.
+Anc2vec is a novel method based on neural networks to construct embeddings of terms from the [Gene Ontology](http://geneontology.org/) (GO) exclusively using three structural features of it: the ontological uniqueness of terms, their ancestor relationships and the sub-ontology to which they belong.
 
 This repository offers a Python package containing the source code of anc2vec,
 as well as instructions for reproducibility of the main results of the study
